@@ -13,14 +13,19 @@ RUN npm install
 
 COPY . .
 
+# 컨테이너가 시작할 때 사용하는 런타임 명령
+ARG DEFAULT_PORT=80
+
+# ENV로 환경변수 설정 가능
+ENV PORT $DEFAULT_PORT
 # 포트
 # Documentation
-EXPOSE 80
+EXPOSE $POST
 
 # VOLUME 컨테이너 내부 위치
-VOLUME ["/app/feedback"]
+# VOLUME ["/app/feedback"]
 
 # 서버 시작
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
 
 

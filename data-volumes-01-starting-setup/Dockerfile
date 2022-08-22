@@ -20,7 +20,7 @@ ARG DEFAULT_PORT=80
 ENV PORT $DEFAULT_PORT
 # 포트
 # Documentation
-EXPOSE $POST
+EXPOSE $PORT
 
 # VOLUME 컨테이너 내부 위치
 # VOLUME ["/app/feedback"]
